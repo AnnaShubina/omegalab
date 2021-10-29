@@ -1,0 +1,65 @@
+.custom-select {
+	position: relative;
+}
+
+.custom-select select {
+	display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+	font-size: 18px;
+	color: $color-text;
+	min-height: 24px;
+	border-bottom: 1px solid $color-border;
+	font-weight: normal;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	padding-right: 20px;
+	word-break: break-word;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 8px;
+	right: 3px;
+	width: 12px;
+	height: 10px;
+	background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.81516 8.85284C6.41651 9.41385 5.58349 9.41385 5.18484 8.85284L0.19398 1.82924C-0.276507 1.16713 0.196887 0.25 1.00914 0.25L10.9909 0.25C11.8031 0.25 12.2765 1.16713 11.806 1.82924L6.81516 8.85284Z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div {
+	color: $color-text;
+	padding: 1px 2px 2px 16px;
+	margin-bottom: 8px;
+	cursor: pointer;
+	user-select: none;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/*style items (options):*/
+.select-items {
+	position: absolute;
+	background-color: $color-back;
+	box-shadow: 0 3px 30px rgba(0, 28, 71, 0.1);
+	border-radius: $border-radius;
+	width: calc(100% + 38px);
+	padding: 16px 0 8px;
+	top: 100%;
+	left: -19px;
+	z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+	display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+	background-color: rgba(216, 231, 255, 0.5);
+}

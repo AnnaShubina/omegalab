@@ -1,0 +1,59 @@
+.form {
+	padding: 48px 100px 46px;
+	position: relative;
+	z-index: 1;
+	@include media(s) {
+		padding: 48px 36px 60px;
+		width: calc(100% + 16px);
+		margin: 0 -8px -153px;
+	}
+}
+
+.form--left {
+	margin-left: 78px;
+	@include media(xl) {
+		margin-left: 0;
+	}
+	@include media(s) {
+		margin-left: -8px;
+	}
+}
+
+.form__item + .form__item {
+	margin-top: 32px;
+}
+
+.form__back {
+	background-color: $color-back;
+	border-radius: $border-radius;
+	box-shadow: 0 3px 30px rgba(0, 28, 71, 0.1);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: transform 0.4s ease;
+	z-index: -1;
+}
+
+@include media(from, m) {
+	.form:hover .form__back {
+		transform: scale(1.05);
+	}
+}
+
+.form__footer {
+	margin-top: 65px;
+	@include media(s) {
+		margin-top: 24px;
+	}
+}
+
+.form__btn {
+	margin-top: 30px;
+	width: 100%;
+	max-width: 270px;
+	@include media(s) {
+		margin-top: 60px;
+	}
+}

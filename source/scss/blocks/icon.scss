@@ -1,0 +1,12 @@
+.icon {
+	@include media(s) {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.icon--top {
+	@include media(s) {
+		transform: translateY(5px);
+	}
+}

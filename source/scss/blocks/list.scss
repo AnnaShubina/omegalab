@@ -1,0 +1,44 @@
+.list {
+	@include clear-list;
+}
+
+.list--footer {
+	font-size: 16px;
+	font-weight: 500;
+
+	.list__item:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	.list__item--l:not(:last-child) {
+		margin-bottom: 32px;
+	}
+	.list__item--m:not(:last-child) {
+		margin-bottom: 16px;
+	}
+	.list__title {
+		font-size: 18px;
+	}
+	.list__title--adaptive {
+		@include media(s) {
+			font-size: 15px;
+		}
+	}
+
+	@include media(s) {
+		font-size: 15px;
+	}
+}
+
+.list--left {
+	margin-left: 75px;
+	@include media(l) {
+		margin-left: 0;
+	}
+}
+
+.list__item:not(:last-child) {
+	margin-bottom: 32px;
+	@include media(s) {
+		margin-bottom: 24px;
+	}
+}

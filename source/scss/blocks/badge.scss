@@ -1,0 +1,45 @@
+.badge {
+	width: 40px;
+	height: 40px;
+	position: relative;
+}
+
+.badge__rect {
+	width: 100%;
+	height: 100%;
+	transform: skewX(-10deg);
+	border-radius: 6px;
+	background-color: #D8E7FF;
+}
+
+.badge--orange .badge__rect {
+	background-color: #FFE6D3;
+}
+
+.badge--pink .badge__rect {
+	background-color: #FFDCF9;
+}
+
+.badge--green .badge__rect {
+	background-color: #C2FFD3;
+}
+
+.badge--yellow .badge__rect {
+	background-color: #FFF8B7;
+}
+
+.badge--red .badge__rect {
+	background-color: #FFCDCD;
+}
+
+.badge--blue .badge__rect {
+	background-color: #E0EBFF;
+}
+
+.badge__icon {
+	position: absolute;
+	top: 0;
+	left: -4px;
+	transform: none;
+	color: $color-text;
+}

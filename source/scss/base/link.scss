@@ -1,0 +1,12 @@
+.link {
+	@include clear-link;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.link--underline {
+	text-decoration: underline;
+}

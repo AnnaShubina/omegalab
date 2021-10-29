@@ -1,0 +1,32 @@
+.option {
+	width: 100%;
+	display: flex;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.option__element {
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	border: 1px solid #E5E5E5;
+	border-radius: 4px;
+}
+
+.option__label {
+	flex-grow: 1;
+	margin-left: 12px;
+	color: $color-gray;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: normal;
+	transform: translateY(-2px);
+}
+
+.option input[type="checkbox"]:checked ~ .option__element {
+	background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.05556L5.16667 9.61111L11 1' stroke='%230066FF' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: center;
+}

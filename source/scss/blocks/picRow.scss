@@ -1,0 +1,47 @@
+.picRow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: -15px -24px;
+
+	@include media(s) {
+		width: calc(100% + 20px);
+		margin: -18px -9px;
+	}
+}
+
+.picRow__item {
+	padding: 15px 24px;
+	img {
+		max-width: 120px;
+		height: auto;
+		object-fit: contain;
+		vertical-align: middle;
+
+		@include media(s) {
+			max-width: 55px;
+		}
+	}
+
+	@include media(s) {
+		padding: 8px 9px;
+	}
+}
+
+.picRow__item--m {
+	img {
+		@include media(s) {
+			max-width: 46px;
+		}
+	}
+}
+
+.picRow__item--s {
+	img {
+		@include media(s) {
+			max-width: 33px;
+		}
+	}
+}
+

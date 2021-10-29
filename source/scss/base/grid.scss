@@ -1,0 +1,196 @@
+@use "sass:math";
+
+.layout {
+	width: 100%;
+	min-width: 320px;
+	max-width: 1180px;
+	padding: 0 24px;
+	margin: 0 auto;
+	@include media(from, l) {
+		padding: 0 30px;
+	}
+}
+
+.layout--s {
+	max-width: 1140px;
+}
+
+.layout--m {
+	max-width: 1240px;
+}
+
+.layout--l {
+	max-width: 1300px;
+}
+
+.cells,
+.cells.cell, {
+	font-size: 0 !important;
+}
+
+.cells--indent {
+	margin: -24px -12px;
+
+	& > [class^="cell_"] {
+		padding: 24px 12px;
+	}
+}
+
+.cells--adaptive {
+	margin: -15px 0;
+
+	& > [class^="cell_"] {
+		padding: 15px 0;
+	}
+}
+
+.cells--indent-ly {
+	margin: -40px -12px;
+	@include media(s) {
+		margin-top: -16px;
+		margin-bottom: -16px;
+	}
+
+	& > [class^="cell_"] {
+		padding: 40px 12px;
+		@include media(s) {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+.cells--indent-l {
+	margin: -35px -12px;
+
+	& > [class^="cell_"] {
+		padding: 35px 12px;
+		@include media(s) {
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+	}
+}
+
+.cells--flex {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.cells--flex.cells--indent-l {
+	@include media(s) {
+		justify-content: center;
+	}
+}
+
+.cells--35 {
+	flex-wrap: nowrap;
+	margin: -16px -35px;
+
+	& > [class^="cell"] {
+		padding: 16px 35px;
+		@include media(s) {
+			padding: 11px 0;
+		}
+	}
+
+	.cell:first-child .flex-start {
+		max-width: 306px;
+		@include media(m) {
+			width: 275px;
+			align-items: center;
+		}
+	}
+
+	.cell:nth-child(2) .flex-start {
+		max-width: 388px;
+		@include media(m) {
+			width: 275px;
+			align-items: center;
+		}
+	}
+
+	.cell:last-child .flex-start {
+		max-width: 287px;
+		@include media(m) {
+			width: 275px;
+			align-items: center;
+		}
+	}
+
+	@include media(m) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.cells--expertise {
+	@include media(s) {
+		margin-top: -20px;
+		margin-bottom: -20px;
+		[class^="cell_"] {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.cell--list {
+			display: flex;
+			justify-content: center;
+			.list {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+[class^="cell_"] {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	font-size: $font-size;
+	@include media(s) {
+		font-size: 16px;
+	}
+}
+
+.cell__left-1 {
+	margin-left: 71px;
+	@include media(l) {
+		margin-left: 0;
+	}
+}
+
+@for $i from 0 through $columns {
+	.cell__#{$i} {
+		width: math.div(100%, $columns) * $i;
+	}
+}
+
+@each $key, $val in $breakpoints-map {
+	@include media($key) {
+		@for $i from 0 through $columns {
+			.cell__#{$key}-#{$i} {
+				width: math.div(100%, $columns) * $i;
+			}
+		}
+	}
+}
+
+// Hidden Classes
+
+@each $key, $val in $breakpoints-map {
+	@include media($key) {
+		.hidden-to-#{$key} {
+			display: none !important;
+		}
+	}
+}
+
+@each $key, $val in $breakpoints-map {
+	@include media(from, $key) {
+		.hidden-from-#{$key} {
+			display: none !important;
+		}
+	}
+}
+

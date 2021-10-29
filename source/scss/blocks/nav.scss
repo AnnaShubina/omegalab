@@ -1,0 +1,22 @@
+.nav {
+}
+
+.nav__link {
+	@include clear-btn;
+	display: inline-block;
+	font-size: 15px;
+	padding: 0 14px;
+	font-weight: bold;
+	color: $color-text;
+	transition: color 0.3s ease, transform 0.3s cubic-bezier(0.35, 0.755, 0.42, 0.95);
+
+	&:hover {
+		cursor: pointer;
+		color: $color-brand;
+		transform: scale(1.1);
+	}
+
+	@include media(xxl) {
+		padding: 0 5px;
+	}
+}

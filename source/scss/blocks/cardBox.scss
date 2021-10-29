@@ -1,0 +1,161 @@
+.cardBox {
+	border-radius: $border-radius;
+	box-shadow: 0 3px 30px rgba(0, 28, 71, 0.1);
+	background: linear-gradient(180deg, #FFFFFF 36.46%, #FFF7F1 100%);
+	padding: 20px 40px 28px;
+	color: $color-gray;
+	width: 100%;
+	max-width: 634px;
+	min-height: 595px;
+	display: flex;
+	flex-direction: column;
+	@include media(m) {
+		max-width: 100%;
+		min-height: 656px;
+	}
+	@include media(s) {
+		font-size: 15px;
+		padding: 0 17px 16px 24px;
+	}
+}
+
+.cardBox--back {
+	background: none;
+	padding: 0;
+	overflow: hidden;
+	@include media(m) {
+		display: none;
+	}
+}
+
+.cardBox__item {
+	display: flex;
+	padding: 20px 0;
+	@include media(s) {
+		display: block;
+		padding: 16px 0;
+	}
+}
+
+.cardBox__item:nth-child(3) {
+	margin-top: auto;
+	min-height: 118px;
+	@include media(s) {
+		min-height: 144px;
+	}
+}
+
+.cardBox__item--border {
+	border-top: 1px solid $color-border;
+}
+
+.cardBox__price:not(:last-child) {
+	margin-right: 56px;
+	@include media(m) {
+		margin-right: 0;
+	}
+}
+
+.cardBox__price {
+	@include media(s) {
+		margin-top: -10px;
+	}
+}
+
+.cardBox__caption {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 2px;
+	@include media(s) {
+		font-size: 15px;
+	}
+}
+
+.cardBox__title {
+	margin-bottom: 8px;
+	@include media(s) {
+		margin-bottom: -16px;
+	}
+}
+
+.cardBox__left {
+	width: 98px;
+	padding-left: 6px;
+	flex-shrink: 0;
+	@include media(s) {
+		width: 100%;
+		padding-left: 0;
+		margin-bottom: 16px;
+	}
+}
+
+.cardBox__right {
+	flex-grow: 1;
+	padding-right: 5px;
+	@include media(s) {
+		padding-right: 0;
+	}
+}
+
+.cardBox__right--s {
+	padding-right: 25px;
+}
+
+.cardBox__right--xs {
+	padding-right: 40px;
+}
+
+.cardBox__back {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: $border-radius;
+}
+
+.cardBoxWrap {
+	padding-top: 80px;
+
+	.cardBox--back {
+		position: absolute;
+		top: -80px;
+		left: 0;
+		height: calc(100% - 60px);
+		z-index: -1;
+	}
+
+	@include media(m) {
+		padding: 0;
+	}
+
+	@include media(s) {
+		width: calc(100% + 16px);
+		margin: 0 -8px;
+	}
+}
+
+.cardBoxWrap--reverse {
+	padding-top: 0;
+	padding-bottom: 80px;
+
+	.cardBoxWrap__inner {
+		justify-content: flex-start;
+	}
+	.cardBox--back {
+		top: 80px;
+		left: unset;
+		right: 0;
+	}
+
+	@include media(m) {
+		padding: 0;
+	}
+}
+
+.cardBoxWrap__inner {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	width: 100%;
+}

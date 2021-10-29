@@ -1,0 +1,30 @@
+.footer {
+	background-color: $color-gray;
+	padding: 100px 0 56px;
+	color: $color-white;
+	font-size: 18px;
+	font-weight: 500;
+
+	@include media(s) {
+		font-size: 15px;
+	}
+
+	.link {
+		color: $color-white;
+	}
+
+	@include media(s) {
+		padding: 50px 0;
+	}
+}
+
+.footer__bottom {
+	padding-top: 50px;
+	text-align: center;
+	@include media(s) {
+		padding-top: 16px;
+	}
+}
+
+
+

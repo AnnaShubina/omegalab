@@ -1,0 +1,10 @@
+.price {
+	font-size: 40px;
+	font-weight: 500;
+	color: $color-accent;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.1;
+	@include media(s) {
+		font-size: 30px;
+	}
+}

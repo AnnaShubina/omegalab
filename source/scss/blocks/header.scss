@@ -1,0 +1,21 @@
+.header {
+}
+
+.header__wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+.header__logo img {
+	@include media(s) {
+		width: 116px;
+	}
+}
+
+.header__toggle {
+	@include clear-btn;
+	margin-left: 30px;
+}
+

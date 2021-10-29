@@ -1,0 +1,57 @@
+.card {
+
+}
+
+.card--s {
+	max-width: 288px;
+}
+
+.card--indentRight {
+	padding-right: 40px;
+	@include media(l) {
+		padding-right: 0;
+	}
+}
+
+.card--indentLeft {
+	padding-left: 50px;
+	@include media(l) {
+		padding-left: 0;
+	}
+}
+
+.card--indentLeft-l {
+	padding-left: 75px;
+	@include media(l) {
+		padding-left: 0;
+	}
+}
+
+.card--shift {
+	margin-left: 30px;
+	@include media(m) {
+		margin-left: 0;
+	}
+}
+
+.card + .card {
+	margin-top: 100px;
+}
+
+.card__badge {
+	margin-bottom: 28px;
+}
+
+@include media(from, m) {
+	.card.moveRight {
+		.badge__rect {
+			transition: transform 0.4s ease;
+		}
+	}
+
+	.card.moveRight:hover {
+		.badge__rect {
+			transform: translateX(8px) skewX(-10deg);
+		}
+	}
+}
