@@ -36,6 +36,31 @@
 	z-index: -1;
 }
 
+.popup__container .form {
+	padding: 0 19px;
+	margin-top: 50px;
+
+	@include media(s) {
+		margin: 32px 0 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.form__item + .form__item {
+		margin-top: 24px;
+		@include media(s) {
+			margin-top: 32px;
+		}
+	}
+
+	.form__footer {
+		margin-top: 35px;
+		@include media(s) {
+			margin-top: 24px;
+		}
+	}
+}
+
 @include media(from, m) {
 	.form:hover .form__back {
 		transform: scale(1.05);

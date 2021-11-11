@@ -25,3 +25,14 @@ textarea.formField {
 	resize: none;
 	height: 24px;
 }
+
+@include media(s) {
+	.formField {
+		font-size: 16px;
+
+		&::placeholder {
+			font-size: 16px;
+		}
+	}
+}
+

@@ -21,6 +21,19 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162707820-6"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+
+	gtag('js', new Date());
+
+	gtag('config', 'UA-162707820-6');
+</script>
 <body class="disableOutline">
 <div class="sr-only">
 	<!-- inject:svg -->
@@ -404,7 +417,9 @@
 				<button class="nav__link" data-ref="contact">Contact Us</button>
 			</nav>
 			<div class="header__right">
-				<div class="btn btn--outline hidden-to-s">Request a call</div>
+				<a href="https://meetings-eu1.hubspot.com/elizabeth-kalina/omegalab" target="_blank"
+					 class="btn btn--outline hidden-to-s">Request
+					a call</a>
 				<button class="header__toggle hidden-from-xl js-menu-open">
 					<img src="img/burger.svg" alt="menu">
 				</button>
@@ -426,7 +441,9 @@
 						<button class="nav__link js-menu-close" data-ref="contact">Contact Us</button>
 					</nav>
 				</div>
-				<div class="btn btn--outline">Request a call</div>
+				<a href="https://meetings-eu1.hubspot.com/elizabeth-kalina/omegalab" target="_blank"
+					 class="btn btn--outline">Request
+					a call</a>
 			</div>
 		</div>
 	</div>
@@ -437,15 +454,18 @@
 			<h1 class="title">Custom Software Development</h1>
 		</div>
 		<div class="intro__content">
-			<div class="intro__description">We&nbsp;offer strategic partnerships to <br class="hidden-from-s"> develop your product either
+			<div class="intro__description">We&nbsp;offer strategic partnerships to <br class="hidden-from-s"> develop your
+				product either
 				from scratch or&nbsp;join it&nbsp;at&nbsp;any stage to&nbsp;accelerate its release
 			</div>
 			<div class="btnGroup">
-				<button class="btn btn--animate btnGroup__btn" data-text="Discuss project">
+				<button class="btn btn--animate btnGroup__btn js-popup-open" data-ref="form" data-text="Discuss project"
+								data-title="Would you like discuss your project and get an estimate?">
 					<span class="btn__label">Discuss project</span>
 					<span class="btn__bg"></span>
 				</button>
-				<button class="btn btn--outline btnGroup__btn">Arrange a call with an expert</button>
+				<a href="https://meetings-eu1.hubspot.com/elizabeth-kalina/omegalab" target="_blank"
+					 class="btn btn--outline btnGroup__btn">Arrange a call with an expert</a>
 			</div>
 		</div>
 	</div>
@@ -460,6 +480,64 @@
 	</div>
 </section>
 <main class="main">
+	<div class="popup" id="form">
+		<div class="popup__overlay"></div>
+		<div class="popup__container">
+			<button class="link popup__close popup-close"><img src="img/close.svg" alt="close" width="25" height="24">
+			</button>
+			<div class="popup__title"></div>
+			<div class="popup__subtitle">Please, leave your contact details and we'll get in touch with you
+				shortly
+			</div>
+			<form action="#" class="form">
+				<div class="form__item">
+					<input type="text" placeholder="First name" class="formField">
+				</div>
+				<div class="form__item">
+					<input type="text" placeholder="Last name" class="formField">
+				</div>
+				<div class="form__item">
+					<input type="text" placeholder="Company name" class="formField">
+				</div>
+				<div class="form__item">
+					<div class="custom-select">
+						<select>
+							<option value="0">Position</option>
+							<option value="1">CEO/Founder</option>
+							<option value="2">Finance Director/CFO</option>
+							<option value="3">CMO/CCO/CRO/Account Director</option>
+							<option value="4">CPO/CTO</option>
+							<option value="5">Product Manager/Project Manager</option>
+							<option value="6">HR (mabager/director)</option>
+							<option value="7">Tender/Big Manager</option>
+							<option value="8">Office manager/General</option>
+							<option value="9">Other</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__item">
+					<input type="text" placeholder="Phone" class="formField">
+				</div>
+				<div class="form__item">
+					<input type="email" placeholder="E-mail" class="formField">
+				</div>
+				<div class="form__footer">
+					<label class="option">
+						<input type="checkbox" checked class="visually-hidden">
+						<span class="option__element"></span>
+						<span class="option__label">
+									By submitting the form you <br> agree to the <a href="#" class="link text-brand" target="_blank">confidentiality policy</a>
+								</span>
+					</label>
+
+				</div>
+				<button class="btn btn--animate form__btn" data-text="Submit">
+					<span class="btn__label">Submit</span>
+					<span class="btn__bg"></span>
+				</button>
+			</form>
+		</div>
+	</div>
 	<section class="box box--m">
 		<div class="layout">
 			<div class="cells cells--flex cells--35">
@@ -755,7 +833,9 @@
 					</ul>
 				</div>
 				<div class="cell__12 hidden-from-s text-center">
-					<button class="btn btn--fix">Discuss project</button>
+					<button class="btn btn--fix js-popup-open" data-ref="form"
+									data-title="Would you like discuss your project and get an estimate?">Discuss project
+					</button>
 				</div>
 			</div>
 		</div>
@@ -1179,7 +1259,8 @@
 			<h2 class="title box__header text-center">Why Choose Us?</h2>
 			<div class="cells cells--indent-ly">
 				<div class="cell__8 cell__l-12 s-text-center">
-					<div class="plate plate--brand plate--l -mr-12 slideRight animation-wave">OmegaLab utilises proven industry competencies in&nbsp;its
+					<div class="plate plate--brand plate--l -mr-12 slideRight animation-wave">OmegaLab utilises proven industry
+						competencies in&nbsp;its
 						progressive approach
 						to&nbsp;the architecture, development, testing and information security of&nbsp;the solutions and
 						products.
@@ -1221,7 +1302,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Quick start</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;can be&nbsp;involved in&nbsp;the project in&nbsp;the shortest
+						<div class="text text-gray text--b mt-15">We&nbsp;can be&nbsp;involved in&nbsp;the project in&nbsp;the
+							shortest
 							time
 							possible
 						</div>
@@ -1250,7 +1332,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Quality</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;ensure the high-end quality of&nbsp;the code and final product
+						<div class="text text-gray text--b mt-15">We&nbsp;ensure the high-end quality of&nbsp;the code and final
+							product
 						</div>
 					</div>
 				</div>
@@ -1263,7 +1346,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Thinking ahead</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;consider further development of&nbsp;the product even before the
+						<div class="text text-gray text--b mt-15">We&nbsp;consider further development of&nbsp;the product even
+							before the
 							project kicks-off
 						</div>
 					</div>
@@ -1291,7 +1375,8 @@
 							</svg>
 						</div>
 						<div class="title-s">International practices</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;use the best technology and solutions from around the world
+						<div class="text text-gray text--b mt-15">We&nbsp;use the best technology and solutions from around the
+							world
 						</div>
 					</div>
 				</div>
@@ -1318,7 +1403,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Experience</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;have been working in&nbsp;a&nbsp;dedicated team format for over
+						<div class="text text-gray text--b mt-15">We&nbsp;have been working in&nbsp;a&nbsp;dedicated team format for
+							over
 							15&nbsp;years
 						</div>
 					</div>
@@ -1332,7 +1418,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Highly qualified team</div>
-						<div class="text text-gray text--b mt-15">While working exclusively with mid-level developers or&nbsp;higher, we&nbsp;emphasize
+						<div class="text text-gray text--b mt-15">While working exclusively with mid-level developers or&nbsp;higher,
+							we&nbsp;emphasize
 							both on&nbsp;hard and soft skills when assembling teams
 						</div>
 					</div>
@@ -1346,7 +1433,8 @@
 							</svg>
 						</div>
 						<div class="title-s">Flexibility</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;adapt to&nbsp;your requirements and tasks, and offer the best
+						<div class="text text-gray text--b mt-15">We&nbsp;adapt to&nbsp;your requirements and tasks, and offer the
+							best
 							practices
 						</div>
 					</div>
@@ -1360,7 +1448,9 @@
 							</svg>
 						</div>
 						<div class="title-s">Responsibility</div>
-						<div class="text text-gray text--b mt-15">We&nbsp;are responsible for the result and provide full transparency</div>
+						<div class="text text-gray text--b mt-15">We&nbsp;are responsible for the result and provide full
+							transparency
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1370,9 +1460,11 @@
 		<div class="layout">
 			<div class="cells cells--indent">
 				<div class="cell__6 cell__l-12 l-text-center">
-					<h2 class="title box__header box__header--s box__header--thin box__indent l-block-center">Tell Us About Your Challenges!</h2>
+					<h2 class="title box__header box__header--s box__header--thin box__indent l-block-center">Tell Us About Your
+						Challenges!</h2>
 					<p class="text text--l text--thin l-block-center">Will get a&nbsp;reliable team of&nbsp;experts in&nbsp;no&nbsp;time!</p>
-					<div class="box__footer text text--m text--thin text-gray l-block-center">Leave your contact details and we will get in&nbsp;touch
+					<div class="box__footer text text--m text--thin text-gray l-block-center">Leave your contact details and we
+						will get in&nbsp;touch
 						as&nbsp;soon as&nbsp;possible
 					</div>
 				</div>
@@ -1380,7 +1472,10 @@
 					<form action="#" class="form form--left">
 						<div class="form__back"></div>
 						<div class="form__item">
-							<input type="text" placeholder="First and last name" class="formField">
+							<input type="text" placeholder="First name" class="formField">
+						</div>
+						<div class="form__item">
+							<input type="text" placeholder="Last name" class="formField">
 						</div>
 						<div class="form__item">
 							<input type="text" placeholder="Company name" class="formField">
@@ -1402,13 +1497,10 @@
 							</div>
 						</div>
 						<div class="form__item">
-							<input type="email" placeholder="Phone" class="formField">
+							<input type="text" placeholder="Phone" class="formField">
 						</div>
 						<div class="form__item">
-							<input type="text" placeholder="E-mail" class="formField">
-						</div>
-						<div class="form__item">
-							<textarea placeholder="Your comment" class="formField textarea-resize"></textarea>
+							<input type="email" placeholder="E-mail" class="formField">
 						</div>
 						<div class="form__footer">
 							<label class="option">
@@ -1437,7 +1529,8 @@
 					<p class="fz-18 mt-15">Partnering with iGaming leaders to&nbsp;develop progressive software solutions</p>
 				</div>
 				<div class="cell__5 cell__s-12 text-right s-text-center">
-					<button class="btn btn--fix mr-12 btn--animate" data-text="Game on">
+					<button class="btn btn--fix mr-12 btn--animate js-popup-open" data-text="Game on" data-ref="form"
+									data-title="Partnership that drives success. <br> Receive exclusive benefits as&nbsp;a&nbsp;Partner in our Partner Program">
 						<span class="btn__label">Game on</span>
 						<span class="btn__bg"></span>
 					</button>
@@ -1453,9 +1546,9 @@
 				<ul class="list list--footer">
 					<li class="list__item list__title">Сustomer service</li>
 					<li class="list__item lh-s">
-						(US) +1 206 693 4359 <br>
-						(NL) +31 20 532 0842 <br>
-						(UK) +44 203 514 6053
+						<a href="tel:+1 206 693 4359" class="link">(US) +1 206 693 4359</a> <br>
+						<a href="tel:+31 20 532 0842" class="link">(NL) +31 20 532 0842</a> <br>
+						<a href="tel:+44 203 514 6053" class="link">(UK) +44 203 514 6053</a>
 					</li>
 					<li class="list__item list__item--l">
 						<a href="mailto:commerce@omegalab.dev" class="link link--underline">commerce@omegalab.dev</a>
@@ -1496,5 +1589,8 @@
 	</div>
 </footer>
 <script src="js/main.js"></script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24888111.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 </html>

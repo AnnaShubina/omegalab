@@ -6,8 +6,8 @@ import sliderSolutionsInit from "./modules/slider-solutions";
 import appearInit from "./modules/animate-appear";
 import ScrollTo from "./modules/scroll-to";
 import DisableOutline from "./modules/disable-outline";
-import TextareaResize from "./modules/textarea-resize";
 import Parallax from "./modules/parallax";
+import Popup from "./modules/popup";
 
 menuInit();
 calcDocumentHeight();
@@ -21,14 +21,16 @@ const sliders = document.querySelectorAll('.slider');
 sliders.forEach((slider) => swiperInit(slider));
 
 
-const textareaEl = document.querySelector('.textarea-resize');
-const textarea = new TextareaResize(textareaEl);
-textarea.init();
-
 const menuItems = document.querySelectorAll('.nav__link');
 menuItems.forEach((item) => {
 	const scrollTo = new ScrollTo(item);
 	scrollTo.init();
+});
+
+const popupBtns = document.querySelectorAll('.js-popup-open');
+popupBtns.forEach((item) => {
+	const popup = new Popup(item);
+	popup.init();
 });
 
 if (window.innerWidth > 768) {
